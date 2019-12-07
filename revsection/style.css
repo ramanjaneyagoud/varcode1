@@ -1,0 +1,295 @@
+.review_profile {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.author_details {
+  max-width: 230px;
+}
+
+h3.author_name {
+  font-size: 16px;
+  color: #333333;
+  line-height: 19px;
+}
+
+p.author_location {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.author_details a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: underline;
+}
+
+.author_desc {
+  color: #333333CC;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.social_follow p.small {
+  font-size: 9px;
+  line-height: 20px;
+  color: #333333CC;
+  letter-spacing: 0.48px;
+}
+
+.fa-whatsapp:before {
+  color: #60FC7C;
+}
+
+.fa-twitter:before {
+  color: #33CCFF;
+}
+
+.fa-instagram:before {
+  background: transparent linear-gradient(50deg, #FBE18A 0%, #FCBB45 21%, #F75274 38%, #D53692 52%, #8F39CE 74%, #5B4FE9 100%) 0% 0% no-repeat padding-box;
+}
+
+.fa-facebook-f:before, .fa-facebook:before {
+  color: #3C5A99;
+}
+
+@media(max-width:767px) {}
+
+/****************** Styles for tabs section ****************************/
+::-webkit-scrollbar {
+  width: 0px;/ Remove scrollbar space /
+}
+
+.review_card.card {
+  background: white;
+}
+
+#reve.nav {
+  flex-wrap: initial !important;
+}
+
+#reve a.nav-link {
+  position: relative;
+}
+
+.review_card .nav-tabs {
+  border-bottom: none !important;
+}
+
+.review_card .nav-tabs>li {
+  border-bottom: 2px solid #ddd;
+}
+
+.review_card .nav-tabs .nav-item {
+  flex-grow: 1;
+}
+
+.review_card .nav-tabs>li.active>a,
+.review_card .nav-tabs>li.active>a:focus,
+.review_card .nav-tabs>li.active>a:hover {
+  border-width: 0;
+}
+
+.review_card .nav-tabs>li>a {
+  color: rgba(0, 0, 0, 0.87);
+  border: 0;
+  border-bottom: 1px solid transparent !important;
+  border-radius: 0 !important;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 0px !important;
+}
+
+.review_card .nav-tabs>li.activeee>a,
+.review_card .nav-tabs>li.activeee>a:focus,
+.review_card .nav-tabs>li>a:hover {
+  border: none;
+  color: rgba(254, 92, 117, 1) !important;
+  background: transparent;
+}
+
+#reve.nav-tabs .nav-item.show .nav-link, #reve.nav-tabs .nav-link.active {
+  border: none;
+  color: rgba(254, 92, 117, 1) !important;
+  background: transparent;
+}
+
+.review_card .nav-tabs>li>a::after {
+  content: "";
+  background: rgba(254, 92, 117, 1);
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+
+.review_card .nav-tabs>li.active>a::after,
+.review_card .nav-tabs>li.activeee>a::after,
+.review_card .nav-tabs>li:hover>a::after {
+  transform: scale(1);
+}
+
+.review_card .tab-nav>li>a::after {
+  background: rgba(254, 92, 117, 1) none repeat scroll 0% 0%;
+  color: #fff;
+}
+
+.review_card .tab-content {
+  padding: 10px
+}
+
+.review_card .card {
+  background: #FFF none repeat scroll 0% 0%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+}
+
+.boxname h3 {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.product_box p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000DE;
+  padding: 5px;
+}
+
+.deliver_on span:first-child, .review_by span:first-child {
+  font-size: 12px;
+}
+
+.deliver_on span:last-child, .review_by span:last-child {
+  font-size: 14px;
+}
+
+.leave-a-review {
+  background: #FD6A80;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.edit a, .edit a:hover, .follow_edit a, .follow_edit a:hover {
+  color: #424242;
+}
+
+.edit a, .edit a:hover, .follow_edit a, .follow_edit a:hover, .leave-a-review, .leave-a-review:hover {
+  text-decoration: none;
+}
+
+div#accordion {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+#accordion .rev_img {
+  position: relative;
+  display: inline-block;
+}
+
+#accordion img.abs_img {
+  position: absolute;
+  top: -5px;
+  right: -3px;
+  max-width: 28px;
+}
+
+#accordion .card-header h3 {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+#accordion .card-header {
+  background: none;
+  border-bottom: 0;
+  padding: 0;
+}
+
+#accordion button.btn.btn-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding-left: 7px;
+  padding-top: 5px;
+}
+
+.fa-chevron-down:before {
+  color: #222;
+}
+
+@media(min-width:768px) {
+  .leave-a-review {
+    max-width: 270px !important;
+  }
+}
+
+@media(max-width:1100px) {
+  .review_card .nav-tabs {
+    display: inline-flex;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    background: #fff;
+  }
+}
+
+@media(max-width:767px) {
+  .review_card .card {
+    max-height: 600px;
+    /* overflow-y: scroll; */
+  }
+
+  .review_card .tab-content {
+    padding: 5px !important;
+  }
+
+  .product_box p {
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .deliver_on span:first-child, .review_by span:first-child {
+    font-size: 10px;
+  }
+
+  .deliver_on span:last-child, .review_by span:last-child {
+    font-size: 12px;
+  }
+
+  .product_name {
+    font-size: 14px !important;
+    line-height: 19px !important;
+    font-weight: 500 !important;
+  }
+
+  #accordion .card-header .pro_image {
+    max-width: 96px;
+  }
+
+  #accordion .card-header h3 {
+    font-size: 13px;
+    line-height: 21px;
+    padding: 2px !important;
+  }
+
+  #accordion img.abs_img {
+    position: absolute;
+    top: -10px;
+    right: -8px;
+    max-width: 25px;
+  }
+}

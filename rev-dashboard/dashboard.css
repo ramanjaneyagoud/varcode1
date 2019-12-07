@@ -1,0 +1,28 @@
+.create {
+    background: #FD6A80;
+    color: #fff;
+    font-size: 15px;
+    padding: 4px 15px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+}
+
+a {
+    color: #000000DE;
+}
+
+a.active,
+a:hover,
+a:focus {
+    color: #FD5C75;
+}
+.dashboard_heading, .dashboard_data {
+    display: grid;
+    grid-template-columns: 95px 1fr repeat(2,60px) 1fr 120px repeat(2,100px);
+    grid-gap: 10px;
+}
+
+.dashboard_heading div{font-size: 12px;line-height: 22px;letter-spacing: 0.24px;color: #333333;font-weight: 500;}
+.dashboard_data{background: #FFFFFF 0% 0% no-repeat padding-box;border: 1px solid #E2E2E2;border-radius: 2px;margin: 10px 0;}
+.dashboard_data div{font-size: 14px;line-height: 20px;letter-spacing: 0.28px;color: #333333;text-align: left;}

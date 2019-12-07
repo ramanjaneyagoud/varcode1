@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reward store</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+  <style media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+    }
+
+    section.reward_section h2 {
+      font-size: 22px;
+      color: #000000CC;
+      line-height: 20px;
+      letter-spacing: 0.44px;
+      margin: 20px auto;
+      font-weight: 600;
+    }
+
+    section.reward_section .product_box .card {
+      border: 0;
+    }
+
+    section.reward_section .product_box {
+      max-width: 246px;
+      width: 100%;
+      box-shadow: 0px 1px 2px 0px #F5F5F5;
+    }
+
+    section.reward_section .card-header h3 {
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: 0.35px;
+      color: #000000;
+      margin-bottom: 0px;
+    }
+
+    section.reward_section .card-body img {
+      width: 100%;
+    }
+
+    section.reward_section .card-body {
+      padding: 0px;
+    }
+
+    section.reward_section .card-header {
+      padding: 8px;
+      background: #F5F5F5;
+      border-bottom: 0;
+    }
+
+    section.reward_section .card-footer .info h5 {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0.28px;
+      color: #000000CC;
+    }
+
+    section.reward_section .card-footer .info p {
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.26px;
+      color: #000000CC;
+    }
+
+    a.claim {
+      font-size: 12px;
+      color: #fff;
+      line-height: 25px;
+      letter-spacing: 0.56px;
+      background: #FD6A80;
+      border-radius: 24px;
+      font-weight: bold;
+      opacity: 1;
+      text-decoration: none;
+    }
+
+    section.reward_section .card-footer {
+      padding: 0px;
+      background: #F5F5F5;
+      border-top: 0;
+    }
+
+    section.reward_section .info {
+      padding: 15px 10px;
+    }
+
+    section.reward_section .knowmore {
+      background: #fff;
+      padding: 8px;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 12px;
+      font-weight: 500;
+      color: #333333CC;
+      cursor: pointer;
+    }
+
+    .reward_block {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .modal_list {
+      list-style: none;
+      padding-left: 15px;
+      text-align: left;
+    }
+
+    .modal_list li::before {
+      content: "";
+      background: url('images/brand-tick.svg') no-repeat;
+      padding-left: 15px;
+    }
+
+    .modal_list li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 10px;
+    }
+
+    #brand_modal .modal-body {
+      padding: 0;
+    }
+
+    div#brand_modal h4 {
+      font-size: 16px;
+      text-align: center;
+      margin: 0 auto;
+      font-weight: 600;
+    }
+
+    #brand_modal .modal-footer {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    #brand_modal .modal-header {
+      border-bottom: 0;
+      position: relative;
+      padding: 10px 0 0;
+    }
+
+    #brand_modal .modal-header button.close {
+      margin: 0 !important;
+      padding: 0 !important;
+      position: absolute;
+      right: -1px;
+      top: -10px;
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 50%;
+      background: #fff;
+      z-index: 9;
+      color: #000;
+      opacity: 1;
+      font-weight: 100;
+    }
+
+    #brand_modal {
+      max-width: 350px;
+      margin: 20px auto;
+      right: 0;
+      padding-bottom: 30px;
+    }
+
+    #brand_modal .modal-footer h5 {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 20px;
+      letter-spacing: 0.24px;
+    }
+
+    div#brand_modal p,
+    div#brand_modal li {
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.24px;
+    }
+
+    @media(min-width:768px) and (max-width:991px) {
+      .reward_block {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media(max-width:767px) {
+      .reward_block {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+      }
+
+      section.reward_section .card-header h3,
+      section.reward_section .card-footer .info h5 {
+        font-size: 14px;
+      }
+
+      section.reward_section .info {
+        padding: 15px 5px;
+      }
+
+      section.reward_section .card-footer .info p {
+        line-height: 15px;
+      }
+
+      #brand_modal .modal-header button.close {
+        right: -10px;
+        top: -8px;
+      }
+    }
+  </style>
+  <script type="text/javascript">
+    setTimeout(function() {
+      if (screen.width < 767) {
+        console.log("ewfef");
+        var claim = document.querySelectorAll("section.reward_section .claim");
+        for (var i = 0; i < claim.length; i++) {
+          claim[i].innerText = "CLAM NOW";
+        }
+      }
+    }, 1000);
+  </script>
+</head>
+
+<body>
+  <section class="reward_section">
+    <div class="container">
+      <h2 class="text-center">Rewards Store</h2>
+      <div class="reward_block">
+        <div class="product_box">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">Diwali Stylecase Box</h3>
+            </div>
+            <div class="card-body"><img src="images/pro1.png" alt=""></div>
+            <div class="card-footer">
+              <div class="info text-center">
+                <h5>Products in the box</h5>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+              </div>
+              <div class="knowmore" data-toggle="modal" data-target="#brand_modal">
+                know more
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_box">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">Diwali Stylecase Box</h3>
+            </div>
+            <div class="card-body"><img src="images/pro2.png" alt=""></div>
+            <div class="card-footer">
+              <div class="info text-center">
+                <h5>Products in the box</h5>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+              </div>
+              <div class="knowmore" data-toggle="modal" data-target="#brand_modal">
+                know more
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_box">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">Diwali Stylecase Box</h3>
+            </div>
+            <div class="card-body"><img src="images/pro3.png" alt=""></div>
+            <div class="card-footer">
+              <div class="info text-center">
+                <h5>Products in the box</h5>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+              </div>
+              <div class="knowmore" data-toggle="modal" data-target="#brand_modal">
+                know more
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_box">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">Diwali Stylecase Box</h3>
+            </div>
+            <div class="card-body"><img src="images/pro4.png" alt=""></div>
+            <div class="card-footer">
+              <div class="info text-center">
+                <h5>Products in the box</h5>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+              </div>
+              <div class="knowmore" data-toggle="modal" data-target="#brand_modal">
+                know more
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_box">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">Diwali Stylecase Box</h3>
+            </div>
+            <div class="card-body"><img src="images/pro5.png" alt=""></div>
+            <div class="card-footer">
+              <div class="info text-center">
+                <h5>Products in the box</h5>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+              </div>
+              <div class="knowmore" data-toggle="modal" data-target="#brand_modal">
+                know more
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_box">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">Diwali Stylecase Box</h3>
+            </div>
+            <div class="card-body"><img src="images/pro6.png" alt=""></div>
+            <div class="card-footer">
+              <div class="info text-center">
+                <h5>Products in the box</h5>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+              </div>
+              <div class="knowmore" data-toggle="modal" data-target="#brand_modal">
+                know more
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_box">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">Diwali Stylecase Box</h3>
+            </div>
+            <div class="card-body"><img src="images/pro1.png" alt=""></div>
+            <div class="card-footer">
+              <div class="info text-center">
+                <h5>Products in the box</h5>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+              </div>
+              <div class="knowmore" data-toggle="modal" data-target="#brand_modal">
+                know more
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product_box">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="text-center">Diwali Stylecase Box</h3>
+            </div>
+            <div class="card-body"><img src="images/pro2.png" alt=""></div>
+            <div class="card-footer">
+              <div class="info text-center">
+                <h5>Products in the box</h5>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+              </div>
+              <div class="knowmore" data-toggle="modal" data-target="#brand_modal">
+                know more
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="modal fade" id="brand_modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Diwali Stylecase Box</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="images/modal-d.png" alt="" class="img-fluid d-none d-sm-block">
+          <img src="images/modal-m.png" alt="" class="img-fluid d-block mx-auto d-sm-none">
+        </div>
+        <div class="modal-footer">
+          <div class="info text-center">
+            <h5>Products in the box</h5>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+            <ul class="modal_list">
+              <li>Biotique Bio Soya Protein Fresh Nourishing Shampoo</li>
+              <li>Indus Valley 100% Organic Growout Beard & Hair Oil</li>
+              <li>Lakme 9 To 5 Complexion Care CC Cream</li>
+              <li>Indus Valley 100% Organic Growout Beard & Hair Oil</li>
+              <li>Estee Lauder Advanced Night Repair Eye Concentrate Matrix</li>
+            </ul>
+            <a href="#" class="claim d-block p-2">CLAM NOW WITH 48 POINTS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

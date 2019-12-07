@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.44" height="23.44" viewBox="0 0 23.44 23.44">
+  <g id="Group_1653" data-name="Group 1653" transform="translate(-5303.361 -2238.514)">
+    <g id="Group_1649" data-name="Group 1649" transform="translate(4526 2097)">
+      <g id="Group_1594" data-name="Group 1594" transform="translate(195.364 -2125.986)">
+        <path id="Path_3679" data-name="Path 3679" d="M141.145,115.155a11.72,11.72,0,1,1-11.721-11.719A11.72,11.72,0,0,1,141.145,115.155Z" transform="translate(464.292 2164.064)" fill="#fff" opacity="0.4"/>
+      </g>
+      <g id="Group_1540" data-name="Group 1540" transform="translate(785.085 146)" opacity="0.2">
+        <path id="Path_3693" data-name="Path 3693" d="M82.918,8h5.594a.943.943,0,0,1,.918.9V20.639a.913.913,0,0,1-.918.9H82.918a.886.886,0,0,1-.918-.9V8.9A.912.912,0,0,1,82.918,8Zm2.141,1.153h1.267a.2.2,0,1,1,0,.384H85.059A.2.2,0,1,1,85.059,9.153Zm-2.491.9h6.249v9.309H82.568Zm3.146,9.693a.6.6,0,1,1,0,1.2.6.6,0,1,1,0-1.2Zm0-11.273a.214.214,0,1,1,0,.427.214.214,0,1,1,0-.427Z" transform="translate(-82 -8)" fill="#a5a5a5" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

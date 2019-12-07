@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://192.168.1.178/works/shade.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {
+    box-sizing: border-box;
+    }
+    
+    body {
+    margin: 0;
+    font-family: Arial;
+    }
+    
+    .column {
+    float: left;
+    padding: 10px;
+    }
+    
+    .column img {
+    opacity: 0.7;
+    cursor: pointer;
+    }
+    
+    .column img:hover {
+    opacity: 1;
+    }
+    
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    
+    .container {
+    position: relative;
+    }
+    
+    #imgtext {
+    position: relative;
+    color: black;
+    font-size: 20px;
+    outline: 1px dashed #FE5C75;
+    outline-offset: 5px;
+    }
+    
+    .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    }
+    .shades {
+    font-size: 20px;
+    color: #212121;
+	}	
+	.shade-image {
+    display: grid;
+    grid-template-columns: auto auto;
+    max-width: max-content;
+    margin-bottom: 20px;
+    }		
+    
+    @media(min-width:921px) {
+		.big-image {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		}
+    }
+    @media(max-width:920px) {
+		.big-image.cover {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 25px;
+		}
+    }
+    
+    .column img {
+    width: 60px;
+    height: 60px;
+    }
+    
+    #expandedImg {
+    max-width: 350px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    }
+    .active
+    {
+    outline: 1px dashed #FE5C75;
+    outline-offset: 6px;
+    }
+    
+    .big-image.cover {
+    max-width:  900px;
+    margin: 50px auto;
+    padding: 0 15px;
+    }
+    
+    .shade_info .shade {
+    float:  left;
+    }
+    
+    div#imgtext,.shades {
+    float:  left;
+    margin-right: 15px;
+    }
+    
+    .shade_info {
+    clear: both;
+    overflow: hidden;
+    }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="big-image cover">
+        <div class="container">
+            <span onclick="this.parentElement.style.display=&#39;none&#39;" class="closebtn">×</span>
+            <img id="expandedImg" src="./shade_files/wmachine.png" alt="Lights">
+        </div>
+        <div class="row">
+            <div class="shade-image">
+                <div class="shades">Shades</div>
+                <div>
+					<div id="imgtext">Nature</div>
+                </div>
+            </div>
+            <div class="column">
+                <img src="./shade_files/wmachine.png" alt="Nature" class="shade active">
+            </div>
+            <div class="column">
+                <img src="./shade_files/banner.jpg" alt="Snow" class="shade">
+            </div>
+            <div class="column">
+                <img src="./shade_files/tap.png" alt="Mountains" class="shade">
+            </div>
+            <div class="column">
+                <img src="./shade_files/chair.png" alt="Lights" class="shade">
+            </div>
+        </div>
+    </div>
+    <script>
+        var x = document.querySelectorAll(".shade");
+        for (var i = 0; i < x.length; i++) {
+            x[i].addEventListener("click", function(e) {
+				var current = document.getElementsByClassName("active"); 
+			 	current [0].classList.remove("active"); 
+				this.classList.add("active");
+                var expandImg = document.getElementById("expandedImg");
+                var imgText = document.getElementById("imgtext");
+                expandImg.src = this.src;
+                imgText.innerHTML = this.alt;
+                expandImg.parentElement.style.display = "block";
+            });
+            
+        }
+        
+  
+        
+        
+
+
+    </script>
+
+
+</body></html>

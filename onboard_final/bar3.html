@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Onboard Journey</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="progressbar">
+      <div class="ps1 steps_progress active"><img src="images/pb1.svg" alt=""></div>
+      <div class="ps2 steps_progress"><img src="images/pb2.svg" alt=""></div>
+      <div class="ps3 steps_progress"><img src="images/pb3.svg" alt=""></div>
+      <div class="ps4 steps_progress"><img src="images/pb4.svg" alt=""></div>
+      <div class="steps_progress"><img class="arrow" src="images/arrow.png" alt=""></div>
+      <div class="ps5 steps_progress"><img src="images/pb5.svg" alt=""></div>
+      <div class="ps6 steps_progress"><img src="images/pb6.svg" alt=""></div>
+      <div class="steps_progress"><img class="arrow" src="images/arrow.png" alt=""></div>
+      <div class="ps7 steps_progress"><img src="images/pb7.svg" alt=""></div>
+      <div class="ps8 steps_progress"><img src="images/pb8.svg" alt=""></div>
+    </div>
+  </div>
+</body>
+<style>
+  .progressbar {
+    background: #F8F8F8;
+    border-radius: 5px;
+    margin: 50px auto;
+    max-width: 620px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 21px 1fr 1fr 21px 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .progressbar .steps_progress img:not(.arrow) {
+    border: 2px solid #e9e9e9;
+    border-radius: 100%;
+  }
+
+  .progressbar .steps_progress.active {
+    background: #39BEB1;
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .progressbar .steps_progress.active.ps1 {
+    border-radius: 5px 0 0 5px;
+  }
+
+  .steps_progress {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .progressbar .steps_progress.active img {
+    background: #fff;
+    border: 2px solid #13a092;
+  }
+</style>
+
+</html>
