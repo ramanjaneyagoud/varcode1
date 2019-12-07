@@ -1,0 +1,813 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "|";
+  color: #FE5C75;
+  font-size: 12px;
+}
+
+.back-to-product {
+  background-color: #FE5C75;
+  border-radius: 3px;
+  max-width: 170px;
+  width: 100%;
+  font-size: 12px;
+  height: 35px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+li.breadcrumb-item a {
+  color: #FE5C75;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.card {
+  position: relative;
+  background: #FAFAFA;
+}
+
+.read_more {
+  color: #FE5C75
+}
+
+.profile div {
+  font-weight: 500;
+}
+
+.profile div span {
+  font-weight: 100;
+  font-weight: 100;
+  padding-left: 5px;
+  letter-spacing: 0.5px;
+}
+
+.card p, .profile div {
+  color: #989898;
+}
+
+#acco {
+  position: absolute;
+  width:30px;
+  height: 30px;
+  border-radius: 50%;
+  right: 5px;
+  top: 10px;
+  z-index: 999;
+  background: #ffff;
+  color: #989898;
+}
+#acco1 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  right: 5px;
+  bottom: 5px;
+  top: unset;
+  z-index: 999;
+  background: #ffff;
+  color: #989898;
+  border: 1px solid #989898;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.beauty_profile h2, .social_profile h2 {
+  color: #333;
+  font-size: 16px;
+}
+
+.beauty_profile .profile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px 0;
+}
+
+.reviewed {
+  content: "\f00c";
+  background: green;
+  color: #fff;
+}
+
+.unreviewed {
+  content: "\f00d";
+  background: red;
+  color: #fff;
+}
+
+.social_profile .d-flex>div {
+  margin-right: 20px;
+  background: #F4F4F4;
+  padding: 5px 10px;
+}
+
+.intro .auth_desc {
+  display: none;
+}
+
+.intro .bsp>div {
+  display: block;
+  max-width: 50%;
+}
+
+.intro .profile div:not(.skin_tone) {
+  display: none;
+}
+
+.intro .fa-chevron-down:before,.opened .fa-chevron-down:before {
+  content: "\f077";
+}
+
+.intro .profile {
+  grid-template-columns: 1fr;
+}
+
+.auth_name {
+  font-weight: bold;
+}
+
+.social_profile .d-flex>div {
+  display: block;
+  cursor: pointer;
+}
+
+.review:after {
+  content: '\f058';
+  color: #0A964B;
+  font-family: FontAwesome;
+  font-size: 16px;
+  position: absolute;
+  top: -5px;
+  right: -7px;
+}
+
+.unreview:after {
+  content: '\f057';
+  position: absolute;
+  color: #f00;
+  top: -5px;
+  right: -7px;
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+.rev_pending:after {
+  position: absolute;
+  content: '\f06a';
+  color: #DB7E00;
+  top: -5px;
+  right: -7px;
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+.non_review:after {
+  content: '\f057';
+  position: absolute;
+  color: #848484;
+  top: -5px;
+  right: -7px;
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+
+/********** review for product *********************/
+
+.review_for_product h3 {
+  font-size: 16px;
+}
+
+.review_for_product .card {
+  padding: 0px !important;
+  margin-bottom: 10px;
+}
+
+.status_msg {
+  border: 1px dashed;
+  width: auto;
+  padding: 2px;
+}
+
+.status_msg.approved {
+  border-color: #0A964B;
+  color: #0A964B;
+}
+
+.status_msg.pending {
+  border-color: #DB7E00;
+  color: #DB7E00;
+}
+
+.status_msg.rejected {
+  border-color: #ED3832;
+  color: #ED3832;
+}
+
+.status_msg.approved:before {
+  margin-right: 4px;
+  content: '\f058';
+  color: #0A964B;
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+
+.status_msg.pending:before {
+  margin-right: 4px;
+  content: '\f06a';
+  color: #DB7E00;
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+
+.status_msg.rejected:before {
+  margin-right: 4px;
+  content: '\f057';
+  color: #ED3832;
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+
+.acc_btn i.fa,.acco i.fa {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 13px;
+}
+
+.social_reviewes>div {
+  margin-right: 10px;
+  position: relative;
+}
+
+.fill_review>div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 15px;
+  padding-bottom: 20px;
+  max-width: 270px;
+  width: 100%;
+}
+
+.fill_review input {
+  font-size: 12px;
+}
+
+.input-group-text {
+  font-size: 12px;
+}
+
+.fb_fill_review .input-group-prepend .input-group-text {
+  background: rgba(59, 89, 153, 1);
+  color: #fff;
+}
+
+.insta_fill_review .input-group-prepend .input-group-text {
+  background: rgba(225, 48, 108, 1);
+  color: #fff;
+}
+
+.insta_fill_review {
+  padding-bottom: 0px !important;
+}
+
+.fill_review {
+  background: url(images/dash.svg);
+  background-repeat: repeat-y;
+  background-position: 16px 0px;
+  max-height: 0;
+  overflow: hidden;
+  /* transition: max-height ease-in-out 0.4s; */
+}
+
+.opened .social_reviewes {
+  display: none;
+}
+
+.opened .fill_review {
+  max-height: 100%;
+  margin:20px;
+}
+
+.sc_fill_review.true button {
+  position: relative;
+  background-color: rgba(193, 193, 193, 1);
+}
+
+.sc_fill_review button {
+  text-align: left;
+  border: 0;
+  border-radius: 3px;
+  background-color: rgba(253, 106, 128, 1);
+  color: #fff;
+}
+
+.sc_fill_review.true button:after {
+  content: '\f058';
+  color: #0A964B;
+  font-family: FontAwesome;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  z-index: 99;
+  opacity: 1;
+}
+
+@media(min-width:768px){
+  .opened .fill_review {
+  max-height: 100%;
+  max-height: 100%;
+  max-width: 280px;
+  width: 100%;
+  margin-left: 10%;
+  position: relative;
+  top: -20px;
+}
+}
+@media(max-width:767px) {
+  .product_image {
+      float: left;
+      width: 30%;
+  }
+
+  .product_image+div {
+      float: left;
+      width: 65%;
+  }
+  .fill_review{
+  display: block;
+  float: none;
+  margin: 0px auto;
+  clear: both;
+  transform: translate(10px, 10px);
+  }
+  .review_for_product h3 {
+  font-size: 14px;
+}
+.card.opened #acco1{
+  top:25%;
+  bottom:unset;
+}
+}
+
+/****************** rev_tabs styles ***************************/
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.review_card.card {
+  background: white;
+}
+
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+.nav-tabs>li {
+  border-bottom: 1px solid #ddd;
+}
+
+.review_card .nav-tabs>li.active>a,
+.review_card .nav-tabs>li.active>a:focus,
+.review_card .nav-tabs>li.active>a:hover {
+  border-width: 0;
+}
+
+.nav-tabs .nav-item {
+  position: relative;
+}
+
+.review_card .nav-tabs>li>a {
+  color: rgba(0, 0, 0, 0.87);
+  /* border: 1px solid #EDEDED !important; */
+  border-radius: 0 !important;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 0px !important;
+}
+
+.review_card .nav-tabs>li.active>a,
+.review_card .nav-tabs>li>a.active,
+.review_card .nav-tabs>li>a:hover {
+  /* overflow-x: scroll; */
+  border: none;
+  color: rgba(254, 92, 117, 1) !important;
+  background: transparent;
+}
+
+.review_card .nav-tabs>li>a::after {
+  content: "";
+  background: rgba(254, 92, 117, 1);
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  transition: all 250ms ease 0s;
+  transform: scale(0);
+}
+
+.review_card .nav-tabs>li>a.active::after,
+.review_card .nav-tabs>li:hover>a::after {
+  transform: scale(1);
+}
+
+.review_card .tab-nav>li>a::after {
+  background: rgba(254, 92, 117, 1) none repeat scroll 0% 0%;
+  color: #fff;
+}
+
+.carousel-cell.product-categories {
+  overflow: auto;
+}
+
+.review_card .tab-content {
+  margin: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.nav-pills .nav-link,
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #333;
+  font-weight: 600;
+  background: none;
+  position: relative;
+}
+
+.nav-pills .nav-link.active {
+  color: rgba(254, 92, 117, 1) !important;
+}
+
+.nav-pills .nav-link:after {
+  position: absolute;
+  content: "\f054";
+  font-family: FontAwesome;
+  right: 0;
+  font-size: 12px;
+  top: 35%;
+}
+
+.review_card .card {
+  background: #FFF none repeat scroll 0% 0%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  /* margin-bottom: 30px; */
+}
+/* 
+body {
+  background: #EDECEC;
+  padding: 50px 0;
+  /* cursor: url('http://res.cloudinary.com/wonkytech/image/upload/c_scale,w_28/v1496298479/circle-128_dumbjv.ico'), default; */
+} */
+
+@media(max-width:1100px) {
+  .review_card .nav-tabs {
+      display: inline-flex;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      flex-wrap: nowrap;
+      z-index: 999;
+  }
+}
+
+@media(max-width:767px) {
+  .review_card .card {
+      max-height: 600px;
+      overflow-y: scroll;
+  }
+
+  div#accordion_profile {
+      width: 95%;
+      margin: 0 auto;
+  }
+}
+
+.inner_tabs .tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+
+.inner_tabs .tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+
+.inner_tabs .tab button:hover {
+  background-color: #ddd;
+}
+
+.inner_tabs .tab button.active {
+  background-color: #ccc;
+}
+
+.inner_tabs .tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+.inner_tabs ul li a,
+.inner_tabs ul li a:focus,
+.inner_tabs ul li a:active {
+  text-decoration: none;
+}
+
+.product_box.selected {
+  position: relative;
+}
+
+.product_box.selected:after {
+  content: "\f00c";
+  position: absolute;
+  top: 22%;
+  left: 40%;
+  font-family: FontAwesome;
+  width: 17px;
+  height: 17px;
+  background: green;
+  font-size: 13px;
+  padding-left: 2px;
+  border-radius: 50%;
+  color: #fff;
+}
+.product-categories {
+  overflow: auto;
+}
+
+/**********************************beauty profile css ******************************/
+div#accordion .card-body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 15px;
+  height: 90px;
+  grid-gap: 10px;
+  background: #fff;
+  max-width: 100%;
+  justify-items: center;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background: #f5f5f5;
+  / Remove scrollbar space / background: #f5f5f5;
+  / Optional: just make scrollbar invisible /
+}
+
+.card-body p {
+  margin-bottom: 0;
+}
+
+#accordion {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#accordion .card-header {
+  padding: 0.05rem;
+}
+
+#accordion .card-header h5 {
+  text-align: left;
+}
+
+#accordion .card-header h5 button {
+  color: #404040 !important;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  letter-spacing: 0.96px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.card-header h5 button:before {
+  font-family: 'FontAwesome';
+  content: "\f0d7";
+  float: right;
+  transition: all 0.5s;
+  padding-right: 15px;
+  position: absolute;
+  right: 0;
+}
+
+.card-header h5 button[aria-expanded="true"]:before {
+  content: "\f0d8";
+}
+
+.card {
+  margin-bottom: 7px;
+}
+
+.scrollbar {
+  float: left;
+  background: #F5F5F5;
+  overflow: hidden;
+  transform: transition 0.5s;
+  box-sizing: border-box;
+  word-break: break-all;
+  width: 100%;
+}
+
+.force-overflow {
+  max-height: 80px;
+}
+
+.scrollbar:hover {
+  overflow-y: scroll;
+  transition: 0.9s;
+  padding: 15px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 2px;
+  background-color: #F5F5F5;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.product-container.scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.product-container.scrollbar {
+  background: #fff;
+}
+
+.product-container.scrollbar:hover {
+  padding: 0;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-height: 290px;
+  overflow-y: scroll;
+}
+
+.product-categories p,
+.beauty-profile p {
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.product {
+  box-shadow: 0px 1px 2px #455B6300;
+  border: 1px solid #F2F2F2;
+  border-radius: 8px;
+  max-width: 96px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.beauty-profile .box_inner>div h3 {
+  text-align: left;
+}
+
+.product img {
+  border-radius: 4px 4px 0 0;
+}
+
+.product-categories .box_inner>div,
+.beauty-profile .box_inner>div {
+  max-width: 900px;
+  width: 100%;
+}
+
+.product.active {
+  border: 1px solid #FE5C75
+}
+
+.product span {
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 0;
+  color: #777777;
+  opacity: 0.56;
+  padding: 5px 15px;
+  line-height: 13px;
+}
+#accordion .card-header {
+  padding: 0.4rem;
+}
+
+/********************* Pending Reviews css *************************************/
+.leave {
+  text-align: right;
+}
+
+.leave-a-review {
+  background: #FD6A80;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.boxname h3 {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.product_box p {
+  line-height: 15px;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+@media(max-width:1200px) {
+  .product_boxes {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+  }
+
+  .product_box img {
+      max-width: 85px;
+  }
+}
+
+@media(max-width:991px) {
+  .product_box img {
+      max-width: 60px;
+  }
+
+  .product_boxes {
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+  }
+
+  .product_box p {
+      font-size: 11px;
+      line-height: 14px;
+      margin: 5px 0;
+  }
+
+  .boxname span {
+      font-size: 10px;
+  }
+}
+
+@media(max-width:767px) {
+  .product_box img {
+      max-width: 60px;
+  }
+
+  .product_boxes {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+  }
+}
