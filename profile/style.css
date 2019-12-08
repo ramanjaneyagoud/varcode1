@@ -194,7 +194,11 @@ li.breadcrumb-item a {
   width: auto;
   padding: 2px;
 }
-
+.status_msg.edit {
+  border-color: #424242;
+  color: #424242;
+  padding: 2px 10px !important;
+}
 .status_msg.approved {
   border-color: #0A964B;
   color: #0A964B;
@@ -210,6 +214,12 @@ li.breadcrumb-item a {
   color: #ED3832;
 }
 
+.status_msg.edit:before {
+  margin-right: 4px;
+  content: '\f040';
+  font-family: FontAwesome;
+  font-size: 16px;
+}
 .status_msg.approved:before {
   margin-right: 4px;
   content: '\f058';
@@ -575,7 +585,7 @@ div#accordion_profile .card {
   text-decoration: none;
 }
 
-.product_box.selected {
+.product_box.selected,.product_box.edit {
   position: relative;
 }
 
@@ -592,6 +602,21 @@ div#accordion_profile .card {
   padding-left: 2px;
   border-radius: 50%;
   color: #fff;
+}
+.product_box.edit:after {
+  content: "\f040";
+  position: absolute;
+  top: 22%;
+  left: 30%;
+  font-family: FontAwesome;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  font-size: 13px;
+  padding-top: 3px;
+  padding-left: 6px;
+  border-radius: 50%;
+  color: #000;  
 }
 .product-categories {
   overflow: auto;
@@ -841,3 +866,74 @@ div#accordion .card-body {
       grid-gap: 15px;
   }
 }
+
+/****************all_reviews css *****************************/
+.fa-star:before {
+  content: "\f005";
+  color: #f2c300;
+}
+button.btn.btn-outline-dark,
+#reviews_filter {
+    box-shadow: none;
+    background: #F8F8F8;
+    color: #424242;
+    border-color: #EDEDED;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: #FE5C75;
+    border-color: #FE5C75;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled).active,
+.btn-outline-dark:not(:disabled):not(.disabled):active,
+.show>.btn-outline-dark.dropdown-toggle {
+    color: #fff;
+    background-color: #FE5C75;
+    border-color: #FE5C75;
+    box-shadow: none;
+}
+
+.review_body .review_title {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.pros li,
+.cons li,
+.review_title+p {
+    color: rgba(51, 51, 51, 0.8);
+}
+.no_images{
+  background-color: rgba(247, 247, 247, 1);
+  max-width: 150px;
+  padding: 10px !important;
+}
+@media(max-width:767px){
+    .review_head .status_msg span{
+    display:none;
+}
+}
+
+/********************** details css *********************/
+.form_data h2{font-size:16px;color:rgba(64, 64, 64, 1);}
+.form_data input,.form_data textarea {
+  font-size: 14px;
+  padding: 0px !important;
+  border: 0px;
+  color:rgba(66, 66, 66, 1);
+}
+.form_data label {
+  font-size: 10px;
+  color:rgba(152, 152, 152, 1);
+  margin-bottom: 0px;
+}
+.about.about_editing input, .about.about_editing textarea {
+  border-bottom: 1px solid rgba(237, 237, 237, 1);
+  border-radius: 0;
+}
+.change{display:none;}
+.about_editing .change{display:block;}

@@ -129,7 +129,9 @@
                         <div class="tab-pane fade" id="how_to_use" role="tabpanel" aria-labelledby="how-to-use-tab">
                             <?php include "pending_reviewes.php"; ?>
                         </div>
-                        <div class="tab-pane fade" id="benefits" role="tabpanel" aria-labelledby="benefits-tab">J</div>
+                        <div class="tab-pane fade" id="benefits" role="tabpanel" aria-labelledby="benefits-tab">
+                        <?php include "all_reviews.php"; ?>
+                        </div>
                         <div class="tab-pane fade" id="ingredients" role="tabpanel" aria-labelledby="ingredients-tab">
                         <?php include "review_for_product.php"; ?>
                         </div>

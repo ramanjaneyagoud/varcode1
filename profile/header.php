@@ -12,5 +12,5 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
     <script type="text/javascript" src="script.js?re"></script>
-    <link rel="stylesheet" href="style.css?tr">
+    <link rel="stylesheet" href="style.css?nnnn">
 </head>
