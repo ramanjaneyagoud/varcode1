@@ -29,23 +29,23 @@
     </section>
     <section class="my-3">
         <div class="container">
-            <div class="card p-3">
+            <div class="card px-3 py-2">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="d-flex justify-content-start">
-                            <img src="https://via.placeholder.com/90x90" alt="" class="author_image d-block mr-2">
-                            <div class="author_info">
+                            <img src="images/user.png" alt="" class="author_image d-block mr-2">
+                            <div class="author_info mt-2">
                                 <div class="auth_name">@RachelGarrett</div>
                                 <div class="auth_location">Hyderabad, India</div>
                             </div>
                         </div>
-                        <div class="auth_desc pt-2">
+                        <div class="auth_desc mt-3">
                             <p>Aenean sed lorem est. Sed quis neque ut nibh suscipit imperdiet ac non augue. Aenean
                                 ornare sit amet lectus non tristique. Nunc ut
                                 <span class="read_more"> Read more…</span></p>
                         </div>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 mt-3">
                         <div class="row bsp">
                             <div class="col-sm-10">
                                 <div class="beauty_profile">
@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-sm-10">
                                 <div class="social_profile mt-4">
-                                    <h2 class="mb-3">Social Profile</h2>
+                                    <h2 class="mb-1">Social Profile</h2>
                                     <div class="d-flex">
                                         <div class="facebook position-relative">
                                             <a href="#">
