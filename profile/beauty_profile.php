@@ -1,4 +1,4 @@
-<div class="beauty-profile">
+<div class="beauty-profile p-2">
     <div class="social_box">
         <div class="box_inner">
             <div>

@@ -8,15 +8,15 @@
                     <ul class="nav nav-tabs" id="reve" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="product-tab" data-toggle="tab" href="#product_rating"
-                                role="tab" aria-controls="product_rating" aria-selected="true">Profile Info</a>
+                                role="tab" aria-controls="product_rating" aria-selected="true">Profile&nbsp;Info</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="how-to-use-tab" data-toggle="tab" href="#how_to_use" role="tab"
-                                aria-controls="how_to_use" aria-selected="false">Pending Reviews</a>
+                                aria-controls="how_to_use" aria-selected="false">Pending&nbsp;Reviews</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="benefits-tab" data-toggle="tab" href="#benefits" role="tab"
-                                aria-controls="benefits" aria-selected="false">All Reviews</a>
+                                aria-controls="benefits" aria-selected="false">All&nbsp;Reviews</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="ingredients-tab" data-toggle="tab" href="#ingredients" role="tab"
@@ -36,7 +36,7 @@
                             aria-labelledby="product-tab">
                             <div class="d-none d-sm-block">
                                 <div class="row">
-                                    <div class="col-sm-3">
+                                    <div class="col-sm-3 py-3 px-2">
                                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
                                             aria-orientation="vertical">
                                             <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
@@ -50,7 +50,7 @@
                                                 aria-selected="false">Product Category</a>
                                         </div>
                                     </div>
-                                    <div class="col-sm-9">
+                                    <div class="col-sm-9 py-2 px-3">
                                         <div class="tab-content" id="v-pills-tabContent">
                                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
                                                 aria-labelledby="v-pills-home-tab">
@@ -75,7 +75,7 @@
                                         <div class="card">
                                             <div class="card-header" id="accordion_profile_one">
                                                 <h5 class="mb-0">
-                                                    <button class="btn btn-link text-uppercase" data-toggle="collapse"
+                                                    <button class="btn btn-link" data-toggle="collapse"
                                                         data-target="#collapse_One" aria-expanded="true"
                                                         aria-controls="collapse_One">
                                                         Profile
@@ -85,14 +85,14 @@
                                             <div id="collapse_One" class="collapse show"
                                                 aria-labelledby="accordion_profile_one"
                                                 data-parent="#accordion_profile">
-                                                <?php include "details.php"; ?>
+                                                <div class="p-2"><?php include "details.php"; ?></div>
                                             </div>
                                         </div>
 
                                         <div class="card">
                                             <div class="card-header" id="accordion_profile_two">
                                                 <h5 class="mb-0">
-                                                    <button class="btn btn-link collapsed text-uppercase"
+                                                    <button class="btn btn-link collapsed"
                                                         data-toggle="collapse" data-target="#collapse_Two"
                                                         aria-expanded="false" aria-controls="collapse_Two">
                                                         Beauty profile
@@ -109,7 +109,7 @@
                                         <div class="card">
                                             <div class="card-header" id="accordion_profile_three">
                                                 <h5 class="mb-0">
-                                                    <button class="btn btn-link collapsed text-uppercase"
+                                                    <button class="btn btn-link collapsed"
                                                         data-toggle="collapse" data-target="#collapse_Three"
                                                         aria-expanded="false" aria-controls="collapse_Three">
                                                         Category

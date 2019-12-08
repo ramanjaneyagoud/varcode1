@@ -1,4 +1,4 @@
-<div class="product-categories">
+<div class="product-categories p-2">
     <div class="social_box">
         <div class="box_inner">
             <div>

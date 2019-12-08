@@ -431,17 +431,17 @@ li.breadcrumb-item a {
   overflow: auto;
 }
 
-.review_card .tab-content {
+/* .review_card .tab-content {
   margin: 20px;
   border: 1px solid #ddd;
   padding: 10px;
-}
+} */
 
 .nav-pills .nav-link,
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
   color: #333;
-  font-weight: 600;
+  font-weight: 400;
   background: none;
   position: relative;
 }
@@ -468,7 +468,7 @@ li.breadcrumb-item a {
 body {
   background: #EDECEC;
   padding: 50px 0;
-  /* cursor: url('http://res.cloudinary.com/wonkytech/image/upload/c_scale,w_28/v1496298479/circle-128_dumbjv.ico'), default; */
+   cursor: url('http://res.cloudinary.com/wonkytech/image/upload/c_scale,w_28/v1496298479/circle-128_dumbjv.ico'), default; 
 } */
 
 @media(max-width:1100px) {
@@ -493,9 +493,39 @@ body {
   }
 
   div#accordion_profile {
-      width: 95%;
+      width: 92%;
       margin: 0 auto;
+      border: 1px solid #EDEDED;
   }
+  ul#reve {
+    flex-wrap: nowrap;
+      overflow-x:scroll;
+      overflow: hidden;
+      margin-bottom: 10px;
+}
+.review_card.card {
+  border: none;
+}
+div#accordion_profile .card-header {
+  padding: 0px 0;
+  background: #fafafa;
+  border: none;
+}
+div#accordion_profile .card-header button {
+  color: #333;
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+}
+div#accordion_profile .card {
+  box-shadow: none;
+  margin-bottom: 1px;
+  border-radius:0px;
+  border:0px;
+}
+#accordion_profile .card-header button[aria-expanded="true"]{
+  color:rgba(254, 92, 117, 1) !important;
+}
 }
 
 .inner_tabs .tab {

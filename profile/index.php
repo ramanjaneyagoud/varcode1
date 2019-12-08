@@ -81,11 +81,11 @@
                                                 <div class="unreview"></div>
                                             </a>
                                         </div>
-                                        <div class="giphy_image">
+                                        <!-- <div class="giphy_image">
                                             <a href="#">
                                                 <img src="images/ytube.svg" alt="" class="ytube">
                                             </a>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
