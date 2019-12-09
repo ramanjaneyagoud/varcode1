@@ -339,7 +339,7 @@ li.breadcrumb-item a {
   max-height: 100%;
   max-width: 280px;
   width: 100%;
-  margin-left: 10%;
+  margin-left: 12%;
   position: relative;
   top: -20px;
 }
@@ -926,14 +926,21 @@ button.btn.btn-outline-dark,
   border: 0px;
   color:rgba(66, 66, 66, 1);
 }
-.form_data label {
-  font-size: 10px;
-  color:rgba(152, 152, 152, 1);
-  margin-bottom: 0px;
-}
-.about.about_editing input, .about.about_editing textarea {
-  border-bottom: 1px solid rgba(237, 237, 237, 1);
-  border-radius: 0;
-}
+.form_data label {font-size: 10px; color:rgba(152, 152, 152, 1); margin-bottom: 0px;}
+.about_editing input, .about_editing textarea,.about_editing .address_block select {
+  border-bottom: 1px solid rgba(237, 237, 237, 1);border-radius: 0; outline:none; box-shadow:none;  max-width: max-content;}
+.about_editing input:focus,#back_btn{ outline:none; box-shadow:none; }
 .change{display:none;}
-.about_editing .change{display:block;}
+.about_editing .change{display:block;font-weight: bold; margin-bottom: 15px;}
+.resend{margin-top: 15px; display: inline-block;color:#FE5C75;}
+.about_editing.block h2,.about_editing.block .myedit{display:none !important;}
+.block:not(first-child) h2 {font-size: 10px;}
+#back_btn{color: #FE5C75;font-size:14px;}
+.address_block .form-group {
+  margin-bottom: 0;
+}
+
+.address_block select {
+  max-width: max-content;
+  border: none;
+}
