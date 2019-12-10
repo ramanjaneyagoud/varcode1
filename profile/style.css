@@ -377,8 +377,12 @@ li.breadcrumb-item a {
 
 .review_card.card {
   background: white;
+  border: 0;
 }
-
+.review_card.card  div#myTabContent {
+  border: 1px solid #EDEDED;
+  background: #FAFAFA;
+}
 .nav-tabs {
   border-bottom: none !important;
 }
@@ -402,7 +406,7 @@ li.breadcrumb-item a {
   /* border: 1px solid #EDEDED !important; */
   border-radius: 0 !important;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   margin-right: 0px !important;
 }
 
@@ -510,7 +514,6 @@ body {
   ul#reve {
     flex-wrap: nowrap;
       overflow-x:scroll;
-      overflow: hidden;
       margin-bottom: 10px;
 }
 .review_card.card {
@@ -919,14 +922,14 @@ button.btn.btn-outline-dark,
 }
 
 /********************** details css *********************/
-.form_data h2{font-size:16px;color:rgba(64, 64, 64, 1);}
+.form_data h2{font-size:16px;color:rgba(152, 152, 152, 1);}
 .form_data input,.form_data textarea {
   font-size: 14px;
   padding: 0px !important;
   border: 0px;
   color:rgba(66, 66, 66, 1);
 }
-.form_data label {font-size: 10px; color:rgba(152, 152, 152, 1); margin-bottom: 0px;}
+.form_data label {font-size: 10px; color:rgba(152, 152, 152, 1); margin-bottom: 0px;font-weight: 500;}
 .about_editing input, .about_editing textarea,.about_editing .address_block select {
   border-bottom: 1px solid rgba(237, 237, 237, 1);border-radius: 0; outline:none; box-shadow:none;  max-width: max-content;}
 .about_editing input:focus,#back_btn{ outline:none; box-shadow:none; }
@@ -939,8 +942,11 @@ button.btn.btn-outline-dark,
 .address_block .form-group {
   margin-bottom: 0;
 }
-
 .address_block select {
   max-width: max-content;
   border: none;
+}
+.first_heading{
+  font-size: 14px!important;
+  color:rgba(64, 64, 64, 1)!important;
 }
