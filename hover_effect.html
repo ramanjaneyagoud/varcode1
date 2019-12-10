@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div class="parent1">
+            <div class="parent2">
+                <div class="parent3">
+                        <img src="dosha.png" alt="">
+                </div>
+                <img src="dosha.png" alt="">
+            </div>
+        </div>
+    </div>
+    <style>
+        #container{    background: url(vedix.jpg);}
+        /* Static state */
+#container 	{ 
+	width: 400px; 
+	height: 400px; 
+	position: relative; 
+	border: 1px solid #ccc; 
+    text-align:center;
+}
+.parent1 	{ 
+	/* overall animation container */
+	height: 0; 
+	overflow: hidden;
+	transition-property: height;
+	transition-duration: 1s;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+.parent2	{ 
+	/* full content during animation *can* go here */ 
+}
+.parent3	{ 
+	/* animated, "folded" block */
+	height: 56px; 
+	transition-property: all; 
+	transition-duration: 1s;
+	transform: rotateX(-90deg);
+	transform-origin: top; 
+}
+
+/* Hover states to trigger animations */
+#container:hover .parent1	{ 
+	height: 111px; 
+}
+#container:hover .parent3	{
+	transform: rotateX(0deg); 
+	height: 111px; 
+}
+    </style>
+</body>
+</html>
