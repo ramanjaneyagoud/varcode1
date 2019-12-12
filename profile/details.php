@@ -7,11 +7,11 @@
     <div class="about_block block">
         <div class="d-flex justify-content-between align-items-start">
             <div class="about">
-                <h2 class="d-inline">Details</h2>
+                <h2 class="d-inline first_heading">Details</h2>
                 <button class="ml-3 border-0 bg-white d-inline small myedit">(<i class="fa fa-pencil"
                         aria-hidden="true"></i>
                     Edit)</button>
-                <form>
+                <form action="" method="post" class="about_block_form">
                     <div class="row">
                         <div class="col">
                             <label for="">First Name</label>
@@ -27,6 +27,9 @@
                         <textarea class="form-control" id="aboutme" rows="3" cols="50">Aenean sed lorem est. Sed quis neque ut nibh suscipit imperdiet ac non augue. Aenean ornare sit amet lectus non tristique. Nunc ut Aenean sed lorem est. Sed quis neque ut nibh suscipit imperdiet ac non augue. Aenean ornare sit amet lectus non tristique. Nunc ut
                         </textarea>
                     </div>
+                    <div class="change">
+                <button id="about_block_submit" class="mt-3 btn custom_btn back-to-product d-block text-white">Save Changes</button>
+            </div>
                 </form>
             </div>
             <div class="product_box edit text-center mr-sm-3">
@@ -130,16 +133,16 @@
 </div>
 
 <script>
-// var edit = document.querySelectorAll(".myedit");
-// for (var i = 0; i < edit.length; i++) {
-//     edit[i].addEventListener("click", function() {
-//         // var current = document.querySelectorAll(".about_editing");
-//         // for(var j=0; j< current.length; j++){
-//         //     current[j].classList.remove("about_editing");
-//         // }
-//         this.parentElement.classList.add("about_editing");
-//     });
-// }
+var edit = document.querySelectorAll(".myedit");
+for (var i = 0; i < edit.length; i++) {
+    edit[i].addEventListener("click", function() {
+        var current = document.querySelectorAll(".about_editing");
+        for(var j=0; j< current.length; j++){
+            current[j].classList.remove("about_editing");
+        }
+        this.parentElement.classList.add("about_editing");
+    });
+}
 </script>
 
 <script>
@@ -149,12 +152,13 @@ $(document).ready(function() {
         $(this).parents(".block").css("display", "block");
         $("#back_btn").removeClass("d-none");
         $("#back_btn").addClass("d-block");
+        $(".change").css("display","block");
     });
     $("#back_btn").click(function() {
         $(".block").css("display", "block");
         $(this).removeClass("d-block");
         $(this).addClass("d-none");
-        //$(".block").removeClass("change");
+        $(".change").css("display","none");
     });
 });
 </script>
