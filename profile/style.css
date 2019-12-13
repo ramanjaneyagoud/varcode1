@@ -630,12 +630,18 @@ div#accordion .card-body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 15px;
-  height: 90px;
-  grid-gap: 10px;
+  height: 160px;
+  grid-gap: 30px 10px;
   background: #fff;
   max-width: 100%;
   justify-items: center;
   text-align: center;
+}
+div#accordion .card-body>div {
+  margin-bottom: 10px;
+}
+div#accordion .card-body div img {
+  max-width: 60px;
 }
 
 ::-webkit-scrollbar {
@@ -751,10 +757,11 @@ div#accordion .card-body {
 
 .product-categories p,
 .beauty-profile p {
-  font-size: 10px;
-  line-height: 14px;
-  text-align: center;
-  margin-top: 4px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    margin-top: 6px;
+    font-weight: 400;
 }
 
 .product {
